@@ -7,6 +7,11 @@ spring:
       jdbc-url: jdbc:h2:mem:test
       username: dev
       password:
+      pool-name: HikariPrimaryPool
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 30000
+      max-lifetime: 2000000
 
   h2:
     console:
@@ -20,6 +25,6 @@ spring:
 
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
+#        dialect: org.hibernate.dialect.H2Dialect
         format_sql: true
         show_sql: true
